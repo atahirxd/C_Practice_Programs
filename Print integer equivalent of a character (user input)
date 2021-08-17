@@ -1,0 +1,10 @@
+//printing integer equivalent
+#include <stdio.h>
+void main()
+{
+	char equal;
+	printf("Input a letter, digit or character:");
+	scanf_s("%c", &equal);
+	printf("%c's integer equivalent is %d", equal, equal);
+	system("pause");
+}
