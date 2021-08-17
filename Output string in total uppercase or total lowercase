@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+#define SIZE 100
+void main()
+{
+	char s[SIZE] = "", lower[SIZE] = "", upper[SIZE] = "";
+	printf("Enter a line of text:\n");
+	gets(s);
+	for (int i = 0; s[i] != '\0'; i++)
+		upper[i] = toupper(s[i]);
+	printf("The line in uppercase is:\n%s", upper);
+	for (int i = 0; s[i] != '\0'; i++)
+		lower[i] = tolower(s[i]);
+	printf("\nThe line in lowercase is:\n%s", lower);
+}
