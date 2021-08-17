@@ -1,0 +1,15 @@
+//printing diameter, circumference and area of a circle
+#include <stdio.h>
+void main()
+{
+	float r;
+	printf("Enter value of radius:");
+	scanf_s("%f", &r);      //user input with prompt
+	float d, n, c, a;
+	d = 2 * r;
+	n = 3.14159;
+	c = 2 * n * r;
+	a = n * r * r;
+	printf("Diameter is %f\nCircumference is %f\nArea is %f", d, c, a);
+	system("pause");
+}
