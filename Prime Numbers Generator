@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdio.h>
+int is_prime(int);  //declaring function
+void main()
+{
+	int num = 1000, flag;
+	flag = is_prime(num);
+	while (num <= 9999)
+	{
+		if (flag = is_prime(num))   //function call
+			printf("%d\t\t", num);
+		num += 1;
+	}
+
+}
+int is_prime(int num)   //function body
+{
+	int prime = 1;
+
+	for (int factor = 2; factor <= num / 2; factor++)
+	{
+		if (num % factor == 0)
+		{
+			prime = 0;
+			break;
+		}
+	}
+	return prime;
+}
+
