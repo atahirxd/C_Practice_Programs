@@ -1,0 +1,33 @@
+#include <stdio.h>
+void main()
+{
+	//Lab 6 Task 4
+	int num, num1, num3, num5, num6;
+	printf("Enter a four digit number: ");
+	scanf_s("%d", &num);
+	num1 = num / 1000;				//first digit
+	num3 = num % 1000 / 100;		//second digit	
+	num5 = num % 1000 % 100 / 10;	//third digit
+	num6 = num % 1000 % 100 % 10;	//fourth digit
+	if (num < 1000 || num > 9999)
+	{
+		printf("Your entry is invalid. Please try again.\n");
+	}
+	else if ((num1 == num3) && (num1 == num5) && (num1 == num6))
+	{
+		printf("%d is not an increasing, decreasing or bouncy number.\n", num);
+	}
+	else if ((num3 >= num1) && (num5 >= num3) && (num6 >= num5))
+	{
+		printf("%d is an increasing number.\n", num);
+	}
+	else if ((num3 <= num1) && (num5 <= num3) && (num6 <= num5))
+	{
+		printf("%d is a decreasing number.\n", num);
+	}
+	else
+	{
+		printf("%d is a bouncy number.\n", num);
+	}
+	system("pause");
+}
