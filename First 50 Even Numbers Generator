@@ -1,0 +1,13 @@
+#include<stdio.h>
+void main()
+{
+	int num;
+	num = 0;
+	while (num < 99)
+	{
+		printf("%d\t\t", num);
+		num += 2;
+	}
+	printf("\n");
+	system("pause");
+}
