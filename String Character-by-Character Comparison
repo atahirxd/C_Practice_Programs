@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+#define SIZE 20
+void main()
+{
+	char arr1[SIZE]="", arr2[SIZE]="";
+	size_t compare;
+	printf("Enter two strings: ");
+	gets(arr1);
+	gets(arr2);
+	printf("How many characters should be compared? ");
+	scanf_s("%u", &compare);
+	if ((strncmp(arr1, arr2, compare)) < 0)
+		printf("%s is less than %s up to %u characters.", arr1, arr2, compare);
+	else if ((strncmp(arr1, arr2, compare)) > 0)
+		printf("%s is greater than %s up to %u characters.", arr1, arr2, compare);
+	else
+		printf("%s and %s are equal.", arr1, arr2);
+}
