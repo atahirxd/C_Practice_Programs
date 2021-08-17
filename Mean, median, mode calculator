@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include<math.h>
+#include<stdlib.h>
+#include<time.h>
+#define SIZE 99
+void sort(int data[]);
+int mean(int data[]), mode(int data[]), median(int data[]);
+void main()
+{
+	int arr[SIZE], i, flag1, flag2, flag3;
+	void sort(arr);
+	srand(time(NULL));
+	for (i = 0; i < SIZE; i++)
+	{
+		arr[i] = 1 + rand() % 100;
+	}
+	printf("The generated array is:\n");
+	for (i = 0; i < SIZE; i++)
+		printf("%d\t\t", arr[i]);
+	printf("\n");
+	sort(arr);
+	printf("\nThe sorted array is:\n");
+	for (i = 0; i < SIZE; i++)
+		printf("%d\t\t", arr[i]);
+	flag1 = mean(arr);
+	flag2 = mode(arr);
+	flag3 = median(arr);
+	printf("\n\nThe mean of the values is: %d\nThe median of the values is: %d\nThe mode of the values is: %d", flag1, flag3, flag2);
+}
+void sort(int data[])
+{
+	int i, j, temp, count;
+	for (i = 0; i < SIZE - 1; i++)
+	{
+		count = 0;
+		for (j = 0; j < SIZE - (1 + i); j++)
+		{
+			if (data[j] > data[j + 1])
+			{
+				temp = data[j];
+				data[j] = data[j + 1];
+				data[j + 1] = temp;
+				if (temp != data[j])
+					count++;
+			}
+		}
+		if (count == 0)
+			break;
+	}
+}
+
+int mean(int data[])
+{
+	int i, sum=0, average;
+	for (i = 0; i < SIZE; i++)
+		sum = sum + data[i];
+	average = sum / SIZE;
+	return average;
+}
+
+int mode(int data[])
+{
+	int i, j, count, t_count = 0, value;
+	for (i = 0; i < SIZE; i++)
+	{
+		count = 0;	
+		for (j = i+1; j < SIZE; j++)
+		{
+			if (data[i] == data[j])
+				count++;
+		}
+		if (t_count < count)
+		{
+			t_count = count;
+			value = data[i];
+		}		
+	}
+	if (t_count != 0)
+		return value;
+}
+
+int median(int data[]) 
+{
+	int middle, i;
+	if (SIZE % 2 != 0)
+	{
+		i = ceil(SIZE / 2);
+		middle = data[i];
+		return middle;
+	}
+	else
+	{
+		i = SIZE / 2;
+		middle = ((data[i] + data[i-1]) / 2);
+		return middle;
+	}
+}
+		
