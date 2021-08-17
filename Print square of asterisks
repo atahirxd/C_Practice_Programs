@@ -1,0 +1,21 @@
+#include<stdio.h>
+int square(int); //function declaration
+void main()
+{
+	int flag, num;
+	printf("Enter the number of rows that you want: ");
+	scanf_s("%d", &num);
+	flag = square(num);   //function call
+}
+int square(int num)  //function body
+{
+	for (int rows = 1; rows <= num; rows++)
+	{
+		for (int star = 1; star <= num; star++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
