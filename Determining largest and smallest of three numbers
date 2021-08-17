@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+	int a, b, c, large, small;
+	printf("Enter three different integers: ");
+	scanf_s("%d%d%d", &a, &b, &c);
+	large = small = a;
+	if (b > large)
+	{
+		large = b;
+	}
+	else
+		large = c;
+	if (b < small)
+	{
+		small = b;
+	}
+	else
+		small = c;
+	printf("The smallest integer is %d.\n", small);
+	printf("The largest integer is %d.\n", large);
+
+
+	system("pause");
+}
