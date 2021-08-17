@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+int counter, num1, large;
+counter = 0;
+large = 0;
+while (counter < 10)
+{
+	printf("Enter an integer: ");
+	scanf_s("%d", &num1);
+	if (num1 >= large)
+	{
+		large = num1;
+	}
+	counter++;
+
+}
+printf("The largest number is %d\n", large);
+
+system("pause");
+
+} 
