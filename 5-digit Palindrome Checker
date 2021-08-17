@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{
+  int org_num, first_digit, second_digit, third_digit, fourth_digit, fifth_digit; //declaring variables
+  
+	printf("Enter a five digit number: ");	//user input
+	scanf_s("%d", &org_num);
+  
+  if (org_num < 10000 || org_num > 99999) //condition for digits
+	{
+		printf("Invalid entry. Please try again.\n");
+	}
+  
+	//initializing
+	first_digit = org_num / 10000;			//repeated process of dividing and getting remainder to split digits
+	second_digit = org_num % 10000 / 1000;	
+	third_digit = org_num % 1000 / 100;
+	fourth_digit = org_num % 100 / 10;
+	fifth_digit = org_num % 10;
+  	if (first_digit == fifth_digit && second_digit == fourth_digit)
+	{
+		printf("%d is a palindrome.\n", org_num);
+	}
+	else
+	{
+		printf("%d is not a palindrome.\n", org_num);
+	}
+
+	system("pause");
+}
