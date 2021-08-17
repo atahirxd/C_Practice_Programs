@@ -1,0 +1,15 @@
+#include <stdio.h>
+void main()
+{
+	int org_num, first_digit, second_digit, third_digit, fourth_digit, fifth_digit; //declaring variables
+	printf("Enter a five digit number: ");	//user input
+	scanf_s("%d", &org_num);
+	//initializing
+	first_digit = org_num / 10000;			//repeated process of dividing and getting remainder to split digits
+	second_digit = org_num % 10000 / 1000;	
+	third_digit = org_num % 1000 / 100;
+	fourth_digit = org_num % 100 / 10;
+	fifth_digit = org_num % 10;
+	printf("The separated digits are: %d\t%d\t%d\t%d\t%d\n", first_digit, second_digit, third_digit, fourth_digit, fifth_digit);
+	system("pause");
+}
