@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{	
+	int pin, counter, user_pin, n;
+	counter = 1;
+	pin = 1234;
+	n = 3;
+	do
+	{
+		printf("Enter your 4-digit PIN: ");
+		scanf_s("%d", &user_pin);
+		if (pin == user_pin)
+		{
+			printf("WELCOME!\n");
+			break;
+		}
+		else
+		{
+			printf("Wrong entry. You have %d tries left.\n", n);
+		}
+		if (n == 0)
+		{
+			printf("Account has been LOCKED. Please try again!\n");
+		}
+		n--;
+		counter += 1;
+
+	} while (counter<=4);
+		
+}
