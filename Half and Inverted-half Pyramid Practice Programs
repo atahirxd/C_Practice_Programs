@@ -1,0 +1,50 @@
+#include<stdio.h>
+void main()
+{
+	int row, star, blank;
+	for (row = 1; row <= 10; row++)
+	{
+		for (star = 1; star <= row; star++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for (row = 10; row >= 1; row--)
+	{
+		for (star = 1; star <= row; star++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for (row = 1; row <= 10; row++)
+	{
+		for (blank = 2; blank <= row; blank++)
+		{
+			printf(" ");
+		}
+		for (star = 10; star >= row; star--)
+		{
+			printf("*");
+		}
+
+		printf("\n");
+	}
+	printf("\n");
+	for (row = 10; row >= 1; row--)
+	{
+		for (blank = 2; blank <= row; blank++)
+		{
+			printf(" ");
+		}
+		for (star = 10; star >= row; star--)
+		{
+			printf("*");
+		}
+
+		printf("\n");
+	}
+}
