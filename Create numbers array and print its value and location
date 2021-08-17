@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+	int arr[10], i, large = 0, location;
+	printf("Enter 10 numbers to be entered: ");
+	for (i = 0; i < 10; i++)
+		scanf_s("%d", &arr[i]);
+	for (i = 0; i < 10; i++)
+	{
+		if (large < arr[i])
+		{
+			large = arr[i];
+			location = i + 1;
+		}
+	}	
+	printf("The largest number is at the position %d and its value is: %d", location, large);
+}
