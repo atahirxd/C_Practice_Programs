@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+double hypotenuse(double, double); //function declaration
+void main()
+{
+	double side1, side2, flag;
+	int condition = 1;
+	while (condition != 0)
+	{
+		printf("Enter the sides of the right angled triangle: ");
+		scanf_s("%lf %lf", &side1, &side2);
+		flag = hypotenuse(side1, side2);   //function call
+		printf("The hypotenuse is: %.1lf\n", flag);
+		printf("Press 1 to continue or press 0 to exit.\n");
+		scanf_s("%d", &condition);
+	}
+}
+double hypotenuse(double side1, double side2)  //function body
+{
+	double hyp;
+	hyp = sqrt((side1 * side1 + side2 * side2));
+	return hyp;
+}
