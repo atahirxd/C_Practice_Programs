@@ -1,0 +1,21 @@
+#include<stdio.h>
+int reversed(int);  //declaring function
+void main()
+{
+	int num, flag;
+	printf("Enter a number between 1 and 9999: ");
+	scanf_s("%d", &num);
+	printf("The reversed number is: ");
+	flag = reversed(num);   //function call
+}
+int reversed(int num)   //function body
+{
+	int rev;
+	while (num > 0)
+	{
+		rev = num % 10;
+		printf("%d", rev);
+		num = num / 10;		
+	}
+return 1;
+}
