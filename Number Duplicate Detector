@@ -1,0 +1,24 @@
+#include<stdio.h>
+void main()
+{
+	int arr[20], i, j, count;
+	printf("Enter 20 numbers between 10 and 100: ");
+	for (i = 0; i < 20; i++)
+	{
+		scanf_s("%d", &arr[i]);
+	}
+	printf("The non-duplicate numbers are: ");
+	for (i = 0; i < 20; i++)
+	{		
+		count = 0;
+		for (j = 0; j<20; j++)
+		{
+			if (j == i);
+			else if (arr[j] == arr[i])
+				count++;
+		}
+		if (count == 0)
+			printf("%d\t", arr[i]);
+	}
+	printf("\nIf the space above is empty then there are no duplicate numbers.\n");	
+}
