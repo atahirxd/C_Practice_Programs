@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main()
+{
+	int x, y, differ, quotient, remainder; //declaring variables 
+	printf("Enter two numbers:");
+	scanf_s("%d %d", &x, &y);
+	//initializing	
+	differ = x - y;
+	quotient = x / y;
+	remainder = x % y;
+	printf("The difference is: %d\nThe quotient is: %d\nThe remainder is: %d\n", differ, quotient, remainder);
+
+	system("pause");
+}
