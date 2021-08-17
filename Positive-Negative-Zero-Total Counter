@@ -1,0 +1,33 @@
+#include<stdio.h>
+void main()
+{
+	int n, x, counter, posi, neg, null;
+	counter = 1;
+	posi = 0;
+	neg = 0;
+	null = 0;
+	printf("How many numbers will you enter? ");
+	scanf_s("%d", &n);
+	do
+	{
+		printf("Enter a number: ");
+		scanf_s("%d", &x);
+		if (x > 0)
+		{
+			posi += 1;
+		}
+		else if (x < 0)
+		{
+			neg += 1;
+		}
+		else
+		{
+			null += 1;
+		}
+		counter += 1;
+
+	} while (counter<=n);
+	printf("The no. of positive numbers entered is: %d\nThe no. of negative numbers entered is: %d\n", posi, neg);
+	printf("The no. of zeroes entered is: %d\nThe total no. of numbers entered is: %d\n", null, n);
+	
+}
