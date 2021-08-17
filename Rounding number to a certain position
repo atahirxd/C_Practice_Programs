@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<math.h>
+double roundToInteger(double), roundToTenths(double), roundToHundreths(double), roundToThousandths(double);
+void main()
+{
+	double x, roundToInteger(x), roundToTenths(x), roundToHundreths(x), roundToThousandths(x);
+	int count = 1, num, count1 = 1;
+	while (count != 0)
+	{
+		printf("Enter how many numbers you want to process: ");
+		scanf_s("%d", &num);
+		count1 = 1;
+		while (count1 <= num)
+		{
+			printf("Enter a floating point number: ");
+			scanf_s("%lf", &x);
+			printf("Original number was: %lf\nNumber rounded to an integer is: %lf\n", x, roundToInteger(x));
+			printf("Number rounded to the nearest tenth is: %lf\nNumber rounded to the nearest hundredth is: %lf\n", roundToTenths(x), roundToHundreths(x));
+			printf("Number rounded to the nearest thousandth is: %lf\n\n", roundToThousandths(x));
+			count1++;
+		}
+		printf("Do you want to continue? Enter 0 to end and 1 to continue: ");
+		scanf_s("%d", &count);
+	}
+}
+double roundToInteger(double x)
+{
+	double y;
+	y = floor(x + 0.5);
+	return y;
+}
+
+double roundToTenths(double x)
+{
+	double y;
+	y = floor(x * 10 + .5) / 10;
+	return y;
+}
+
+double roundToHundreths(double x)
+{
+	double y;
+	y = floor(x * 100 + .5) / 100;
+	return y;
+}
+double roundToThousandths(double x)
+{
+	double y;
+	y = floor(x * 1000 + .5) / 1000;
+	return y;
+}
