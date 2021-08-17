@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+	int h, p, b;
+	printf("Enter the value of the hypotenuse, perpendicular and base of the triangle: ");
+	scanf_s("%d%d%d", &h, &p, &b);
+	if (h == 0 || p == 0 || b == 0)  //non-zero condition
+	{
+		printf("Your entry is invalid.\n");
+	}
+	if (((b*b) + (p*p))==(h*h))
+	{
+			printf("The triangle is a right-angled triangle.\n");
+    }
+	else
+	{
+		printf("The triangle is not a right-angled triangle.\n");
+	}
+
+	system("pause");
+}
