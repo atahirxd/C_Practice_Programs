@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+	//Lab Task 1
+	int x; 
+	printf("Enter a number: ");
+	scanf_s("%d", &x);
+	if (x%2==0)
+	{
+		printf("%d is even.\n", x);
+	}
+	else
+	{
+		printf("%d is odd.\n", x);
+	}
+	system("pause");
+}
