@@ -1,0 +1,17 @@
+//printing sum, average and product of three integers
+#include <stdio.h>
+void main()
+{
+	int x, y, z;
+	printf("Input three different integers:");
+	scanf_s(" %d", &x);
+	scanf_s(" %d", &y);
+	scanf_s(" %d", &z);
+	int s = x + y + z;		//sum
+	int a = s / 3;			//average
+	int p = x * y * z;		//product
+	printf("Sum is %d\n", s);	//print
+	printf("Average is %d\n", a);
+	printf("Product is %d\n", p);
+	system("pause");
+}
